@@ -3,20 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using HackVratsa.Models.Interfaces;
 using HackVratsa.Models.Questions.Interfaces;
 
-namespace HackVratsa.Models.Matriculation.Interfaces
+namespace HackVratsa.Models.Subjests.Intefaces
 {
-    public interface IMatriculation
+    public interface ISubject : INamealbe
     {
-        int Time { get; }
-
-        int Points { get; }
-
         IList<IQuestion> Questions { get; }
 
-        void CalculateRating();
-
         void AddQuestion(IQuestion question);
+
+        void GenerateMatriculation();
     }
 }

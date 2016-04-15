@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using HackVratsa.Models.Matriculation.Interfaces;
 using HackVratsa.Models.Questions.Interfaces;
 
@@ -11,12 +12,27 @@ namespace HackVratsa.Models.Matriculation
     public abstract class Matriculation : IMatriculation
     {
         private int points;
+        private int time;
         private IList<IQuestion> questions;
 
-        protected Matriculation()
+        protected Matriculation(int time)
         {
             this.Points = 0;
             this.Questions = new List<IQuestion>();
+            this.Time = time;
+        }
+
+        public int Time
+        {
+            get { return this.time; }
+            set
+            {
+                if (value <= 0)
+                {
+                    throw new ArgumentOutOfRangeException("Time cannot be negative or zero!");
+                }
+                this.time = value;
+            }
         }
 
         public int Points
