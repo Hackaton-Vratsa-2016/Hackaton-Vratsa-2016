@@ -10,6 +10,10 @@ using System.Windows.Forms;
 
 namespace HackVratsa
 {
+    using System.IO;
+    using System.Runtime.Serialization.Json;
+    using System.Xml;
+
     public partial class SubjectTwelveGrade : Form
     {
         public SubjectTwelveGrade()
@@ -18,8 +22,12 @@ namespace HackVratsa
         }
 
         private void bgButton_Click(object sender, EventArgs e)
-        {
-            MaturaParser.GenerateMatura(MaturaResources.ResourcesPath + MaturaResources.Lit);
+        {          
+            using (var stream = File.OpenRead("json1.json"))
+            {
+                DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(Matura));
+                Matura matura = (Matura)ser.ReadObject(stream);
+            }
         }
     }
 }

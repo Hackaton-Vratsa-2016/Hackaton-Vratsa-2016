@@ -9,10 +9,14 @@ namespace HackVratsa.Models.Questions.Interfaces
 {
     public interface IQuestion
     {
-        string QuestionText { get; }
+        string QuestionText { get; set; }
 
-        int Points { get; }
+        string QuestionId { get; set; }
 
-        string CorrectAnswer { get; }
+        List<Answer> Answers { get; set; }
+
+        string CorrectAnswer { get; set; }
+
+        int Points { get; set; }
     }
 }
