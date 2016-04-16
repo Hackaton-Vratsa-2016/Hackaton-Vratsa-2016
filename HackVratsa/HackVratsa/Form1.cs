@@ -14,7 +14,31 @@ namespace HackVratsa
     {
         public Form1()
         {
-            InitializeComponent();
+            this.InitializeComponent();
+        }
+
+        private void FourGradeButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form fourGradeField = new SubjectFourGrade();
+            fourGradeField.ShowDialog();
+            this.Dispose();
+        }
+
+        private void sevenGradeButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form sevenGradeField = new SubjectsSevenGrade();
+            sevenGradeField.ShowDialog();
+            this.Dispose();
+        }
+
+        private void TwelveGradeButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form twelveGradeField = new SubjectTwelveGrade();
+            twelveGradeField.ShowDialog();
+            this.Dispose();
         }
     }
 }

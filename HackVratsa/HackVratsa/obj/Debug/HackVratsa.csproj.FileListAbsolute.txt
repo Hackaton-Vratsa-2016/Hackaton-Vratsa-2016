@@ -1,2 +1,0 @@
-D:\MyProjects\HackVratsa\HackVratsa\bin\Debug\HackVratsa.exe.config
-C:\Users\volen\Documents\GitHub\Hackaton-Vratsa-2016\HackVratsa\HackVratsa\bin\Debug\HackVratsa.exe.config

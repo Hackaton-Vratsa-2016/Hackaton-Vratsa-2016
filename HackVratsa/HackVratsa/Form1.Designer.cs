@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.FourGradeButton = new System.Windows.Forms.Button();
+            this.sevenGradeButton = new System.Windows.Forms.Button();
+            this.TwelveGradeButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -44,44 +44,47 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Моля изберете клас";
             // 
-            // button1
+            // FourGradeButton
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(80, 134);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(246, 124);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Четвърти клас";
-            this.button1.UseVisualStyleBackColor = true;
+            this.FourGradeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FourGradeButton.Location = new System.Drawing.Point(80, 134);
+            this.FourGradeButton.Name = "FourGradeButton";
+            this.FourGradeButton.Size = new System.Drawing.Size(246, 124);
+            this.FourGradeButton.TabIndex = 1;
+            this.FourGradeButton.Text = "Четвърти клас";
+            this.FourGradeButton.UseVisualStyleBackColor = true;
+            this.FourGradeButton.Click += new System.EventHandler(this.FourGradeButton_Click);
             // 
-            // button2
+            // sevenGradeButton
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(342, 134);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(189, 123);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Седми клас";
-            this.button2.UseVisualStyleBackColor = true;
+            this.sevenGradeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sevenGradeButton.Location = new System.Drawing.Point(342, 134);
+            this.sevenGradeButton.Name = "sevenGradeButton";
+            this.sevenGradeButton.Size = new System.Drawing.Size(189, 123);
+            this.sevenGradeButton.TabIndex = 2;
+            this.sevenGradeButton.Text = "Седми клас";
+            this.sevenGradeButton.UseVisualStyleBackColor = true;
+            this.sevenGradeButton.Click += new System.EventHandler(this.sevenGradeButton_Click);
             // 
-            // button3
+            // TwelveGradeButton
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(565, 134);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(334, 123);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Дванадесети клас";
-            this.button3.UseVisualStyleBackColor = true;
+            this.TwelveGradeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TwelveGradeButton.Location = new System.Drawing.Point(565, 134);
+            this.TwelveGradeButton.Name = "TwelveGradeButton";
+            this.TwelveGradeButton.Size = new System.Drawing.Size(334, 123);
+            this.TwelveGradeButton.TabIndex = 3;
+            this.TwelveGradeButton.Text = "Дванадесети клас";
+            this.TwelveGradeButton.UseVisualStyleBackColor = true;
+            this.TwelveGradeButton.Click += new System.EventHandler(this.TwelveGradeButton_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 561);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.TwelveGradeButton);
+            this.Controls.Add(this.sevenGradeButton);
+            this.Controls.Add(this.FourGradeButton);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "HackVratsa-Maturi";
@@ -93,9 +96,9 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button FourGradeButton;
+        private System.Windows.Forms.Button sevenGradeButton;
+        private System.Windows.Forms.Button TwelveGradeButton;
     }
 }
 
