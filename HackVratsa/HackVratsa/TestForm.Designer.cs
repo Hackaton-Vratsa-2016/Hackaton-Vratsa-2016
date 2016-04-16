@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.questionLabel = new System.Windows.Forms.Label();
-            this.answerOneButton = new System.Windows.Forms.Button();
-            this.answerTwoButton = new System.Windows.Forms.Button();
-            this.answerTreeButton = new System.Windows.Forms.Button();
-            this.answerFourButton = new System.Windows.Forms.Button();
             this.PreviousQuestionButton = new System.Windows.Forms.Button();
             this.NextQuestionButton = new System.Windows.Forms.Button();
+            this.answerOneCheckButton = new System.Windows.Forms.CheckBox();
+            this.answerTreeCheckButton = new System.Windows.Forms.CheckBox();
+            this.answerFourCheckButton = new System.Windows.Forms.CheckBox();
+            this.answerTwoCheckButton = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // questionLabel
@@ -46,46 +46,9 @@
             this.questionLabel.TabIndex = 0;
             this.questionLabel.Text = "Question";
             // 
-            // answerOneButton
-            // 
-            this.answerOneButton.Location = new System.Drawing.Point(12, 127);
-            this.answerOneButton.Name = "answerOneButton";
-            this.answerOneButton.Size = new System.Drawing.Size(450, 100);
-            this.answerOneButton.TabIndex = 1;
-            this.answerOneButton.Text = "button1";
-            this.answerOneButton.UseVisualStyleBackColor = true;
-            this.answerOneButton.Click += new System.EventHandler(this.answerOneButton_Click);
-            // 
-            // answerTwoButton
-            // 
-            this.answerTwoButton.Location = new System.Drawing.Point(522, 127);
-            this.answerTwoButton.Name = "answerTwoButton";
-            this.answerTwoButton.Size = new System.Drawing.Size(450, 100);
-            this.answerTwoButton.TabIndex = 2;
-            this.answerTwoButton.Text = "button2";
-            this.answerTwoButton.UseVisualStyleBackColor = true;
-            // 
-            // answerTreeButton
-            // 
-            this.answerTreeButton.Location = new System.Drawing.Point(12, 247);
-            this.answerTreeButton.Name = "answerTreeButton";
-            this.answerTreeButton.Size = new System.Drawing.Size(450, 100);
-            this.answerTreeButton.TabIndex = 3;
-            this.answerTreeButton.Text = "button3";
-            this.answerTreeButton.UseVisualStyleBackColor = true;
-            // 
-            // answerFourButton
-            // 
-            this.answerFourButton.Location = new System.Drawing.Point(522, 247);
-            this.answerFourButton.Name = "answerFourButton";
-            this.answerFourButton.Size = new System.Drawing.Size(450, 100);
-            this.answerFourButton.TabIndex = 4;
-            this.answerFourButton.Text = "button4";
-            this.answerFourButton.UseVisualStyleBackColor = true;
-            // 
             // PreviousQuestionButton
             // 
-            this.PreviousQuestionButton.Location = new System.Drawing.Point(12, 372);
+            this.PreviousQuestionButton.Location = new System.Drawing.Point(22, 354);
             this.PreviousQuestionButton.Name = "PreviousQuestionButton";
             this.PreviousQuestionButton.Size = new System.Drawing.Size(450, 50);
             this.PreviousQuestionButton.TabIndex = 5;
@@ -95,7 +58,7 @@
             // 
             // NextQuestionButton
             // 
-            this.NextQuestionButton.Location = new System.Drawing.Point(522, 372);
+            this.NextQuestionButton.Location = new System.Drawing.Point(502, 354);
             this.NextQuestionButton.Name = "NextQuestionButton";
             this.NextQuestionButton.Size = new System.Drawing.Size(450, 50);
             this.NextQuestionButton.TabIndex = 6;
@@ -103,17 +66,61 @@
             this.NextQuestionButton.UseVisualStyleBackColor = true;
             this.NextQuestionButton.Click += new System.EventHandler(this.NextQuestionButton_Click);
             // 
+            // answerOneCheckButton
+            // 
+            this.answerOneCheckButton.Appearance = System.Windows.Forms.Appearance.Button;
+            this.answerOneCheckButton.Location = new System.Drawing.Point(22, 127);
+            this.answerOneCheckButton.Name = "answerOneCheckButton";
+            this.answerOneCheckButton.Size = new System.Drawing.Size(450, 100);
+            this.answerOneCheckButton.TabIndex = 7;
+            this.answerOneCheckButton.Text = "checkBox1";
+            this.answerOneCheckButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.answerOneCheckButton.UseVisualStyleBackColor = true;
+            // 
+            // answerTreeCheckButton
+            // 
+            this.answerTreeCheckButton.Appearance = System.Windows.Forms.Appearance.Button;
+            this.answerTreeCheckButton.Location = new System.Drawing.Point(22, 233);
+            this.answerTreeCheckButton.Name = "answerTreeCheckButton";
+            this.answerTreeCheckButton.Size = new System.Drawing.Size(450, 100);
+            this.answerTreeCheckButton.TabIndex = 9;
+            this.answerTreeCheckButton.Text = "checkBox2";
+            this.answerTreeCheckButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.answerTreeCheckButton.UseVisualStyleBackColor = true;
+            // 
+            // answerFourCheckButton
+            // 
+            this.answerFourCheckButton.Appearance = System.Windows.Forms.Appearance.Button;
+            this.answerFourCheckButton.Location = new System.Drawing.Point(502, 233);
+            this.answerFourCheckButton.Name = "answerFourCheckButton";
+            this.answerFourCheckButton.Size = new System.Drawing.Size(450, 100);
+            this.answerFourCheckButton.TabIndex = 10;
+            this.answerFourCheckButton.Text = "checkBox3";
+            this.answerFourCheckButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.answerFourCheckButton.UseVisualStyleBackColor = true;
+            // 
+            // answerTwoCheckButton
+            // 
+            this.answerTwoCheckButton.Appearance = System.Windows.Forms.Appearance.Button;
+            this.answerTwoCheckButton.Location = new System.Drawing.Point(502, 127);
+            this.answerTwoCheckButton.Name = "answerTwoCheckButton";
+            this.answerTwoCheckButton.Size = new System.Drawing.Size(450, 100);
+            this.answerTwoCheckButton.TabIndex = 11;
+            this.answerTwoCheckButton.Text = "checkBox1";
+            this.answerTwoCheckButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.answerTwoCheckButton.UseVisualStyleBackColor = true;
+            // 
             // TestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 561);
+            this.Controls.Add(this.answerTwoCheckButton);
+            this.Controls.Add(this.answerFourCheckButton);
+            this.Controls.Add(this.answerTreeCheckButton);
+            this.Controls.Add(this.answerOneCheckButton);
             this.Controls.Add(this.NextQuestionButton);
             this.Controls.Add(this.PreviousQuestionButton);
-            this.Controls.Add(this.answerFourButton);
-            this.Controls.Add(this.answerTreeButton);
-            this.Controls.Add(this.answerTwoButton);
-            this.Controls.Add(this.answerOneButton);
             this.Controls.Add(this.questionLabel);
             this.Name = "TestForm";
             this.Text = "TestForm";
@@ -126,11 +133,11 @@
         #endregion
 
         private System.Windows.Forms.Label questionLabel;
-        private System.Windows.Forms.Button answerOneButton;
-        private System.Windows.Forms.Button answerTwoButton;
-        private System.Windows.Forms.Button answerTreeButton;
-        private System.Windows.Forms.Button answerFourButton;
         private System.Windows.Forms.Button PreviousQuestionButton;
         private System.Windows.Forms.Button NextQuestionButton;
+        private System.Windows.Forms.CheckBox answerOneCheckButton;
+        private System.Windows.Forms.CheckBox answerTreeCheckButton;
+        private System.Windows.Forms.CheckBox answerFourCheckButton;
+        private System.Windows.Forms.CheckBox answerTwoCheckButton;
     }
 }

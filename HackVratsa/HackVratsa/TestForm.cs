@@ -51,10 +51,10 @@ namespace HackVratsa
         private void ShowQuestion(IMatriculation matriculation)
         {
             this.questionLabel.Text = matriculation.Questions[this.CurrentQuestionIndex].QuestionText;
-            this.answerOneButton.Text = matriculation.Questions[this.CurrentQuestionIndex].AnswersList[0];
-            this.answerTwoButton.Text = matriculation.Questions[this.CurrentQuestionIndex].AnswersList[1];
-            this.answerTreeButton.Text = matriculation.Questions[this.CurrentQuestionIndex].AnswersList[2];
-            this.answerFourButton.Text = matriculation.Questions[this.CurrentQuestionIndex].AnswersList[3];
+            this.answerOneCheckButton.Text = matriculation.Questions[this.CurrentQuestionIndex].AnswersList[0];
+            this.answerTwoCheckButton.Text = matriculation.Questions[this.CurrentQuestionIndex].AnswersList[1];
+            this.answerTreeCheckButton.Text = matriculation.Questions[this.CurrentQuestionIndex].AnswersList[2];
+            this.answerFourCheckButton.Text = matriculation.Questions[this.CurrentQuestionIndex].AnswersList[3];
         }
 
         private void NextQuestionButton_Click(object sender, EventArgs e)

@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Data;
 using HackVratsa.Models.Questions;
 
@@ -16,17 +15,3 @@ namespace HackVratsa
 
     }
 }
-=======
-﻿namespace HackVratsa
-{
-    public static class MaturaUtils
-    {
-        // todo: move into another class?
-        private const string MaturasPath = @"\Maturas\";
-
-
-
-       
-    }
-}
->>>>>>> origin/master

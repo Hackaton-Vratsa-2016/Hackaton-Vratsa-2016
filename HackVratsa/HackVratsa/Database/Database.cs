@@ -9,13 +9,6 @@ namespace HackVratsa.Database
 {
     public class Database : IDatabase
     {
-        private IList<IList<IQuestion>> englishQuestionsList;
-        private IList<IList<IQuestion>> mathQuestionsList;
-        private IList<IList<IQuestion>> physicsQuestionList;
-        private IList<IList<IQuestion>> historyQuestionsList;
-        private IList<IList<IQuestion>> geographyQuestionsList;
-        private IList<IList<IQuestion>> chemistryQuestionsList;
-
         public Database(
             IList<IList<IQuestion>> bulgarianQuestionsList,
             IList<IList<IQuestion>> englishQuestionsList,

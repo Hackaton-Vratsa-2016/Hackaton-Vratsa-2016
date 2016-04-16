@@ -5,14 +5,13 @@ using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 using HackVratsa.Models.Matriculation;
-
+using HackVratsa.Models.Questions;
 using iTextSharp.text.pdf;
 using iTextSharp.text.pdf.parser;
 
 namespace HackVratsa
 {
     using Models.Questions.Interfaces;
-    using Models.Questions.QuestionTypes;
 
     public static class MaturaParser
 	{
@@ -37,7 +36,6 @@ namespace HackVratsa
 
 		    foreach (var parsedQuestion in parsedQuestions)
 		    {
-		        IQuestion question = new QuestionClosedAnswer();
 		    }
 
             

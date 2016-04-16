@@ -11,6 +11,8 @@ namespace HackVratsa
 {
     public interface IDatabase
     {
+        
+
         IList<IList<IQuestion>> BulgarianQuestionsList { get; }
 
         IList<IList<IQuestion>> EnglishQuestionsList { get; }
