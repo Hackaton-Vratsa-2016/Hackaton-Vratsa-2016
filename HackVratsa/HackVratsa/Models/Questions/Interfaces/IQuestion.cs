@@ -11,6 +11,8 @@ namespace HackVratsa.Models.Questions.Interfaces
     {
         string QuestionText { get; }
 
+        IList<string> AnswersList { get; }
+
         int Points { get; }
 
         string CorrectAnswer { get; }

@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using HackVratsa.Models.Matriculation;
+using HackVratsa.Models.Questions;
 
 namespace HackVratsa
 {
@@ -19,7 +21,14 @@ namespace HackVratsa
 
         private void bgButton_Click(object sender, EventArgs e)
         {
-            MaturaParser.GenerateMatura(MaturaResources.ResourcesPath + MaturaResources.Lit);
+            //MaturaParser.GenerateMatura(MaturaResources.ResourcesPath + MaturaResources.Lit);
+            Matriculation matriculation = new Matriculation();
+            matriculation.Questions.Add(MaturaUtils.QuestionOne);
+            matriculation.Questions.Add(MaturaUtils.QuestoinTwo);
+            this.Hide();
+            Form testForm = new TestForm(matriculation);
+            testForm.ShowDialog();
+            this.Dispose();
         }
     }
 }

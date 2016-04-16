@@ -8,19 +8,21 @@ using HackVratsa.Models.Enums;
 
 namespace HackVratsa.Models.Questions
 {
-    public abstract class QuestionBase : IQuestion
+    public class Question : IQuestion
     {
         private string correctAnswer;
+        private IList<string> answersList;
         private string questionText;
         private int points;
         private int category;
         
-        protected QuestionBase(string correctAnswer, string questionText, int category, int points)
+        public Question(string correctAnswer, string questionText, int category, int points, IList<string> answersList)
         {
             this.CorrectAnswer = correctAnswer;
             this.QuestionText = questionText;
             this.Category = category;
             this.Points = points;
+            this.AnswersList = answersList;
         }
 
         public int Category
@@ -47,6 +49,12 @@ namespace HackVratsa.Models.Questions
                 }
                 this.questionText = value;
             }
+        }
+
+        public IList<string> AnswersList
+        {
+            get { return this.answersList; }
+            set { this.answersList = value; }
         }
 
         public int Points

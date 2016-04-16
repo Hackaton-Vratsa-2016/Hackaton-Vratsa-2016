@@ -40,5 +40,10 @@ namespace HackVratsa
             twelveGradeField.ShowDialog();
             this.Dispose();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
