@@ -4,10 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HackVratsa.Models.Questions.Interfaces
+namespace HackVratsa.Models.Enums
 {
-    public interface IClosedAnswers
+    public enum GradeType
     {
-        IList<string> Answers { get; }
+        FourGrade,
+        SevenGrad,
+        TwelveGrade
     }
 }

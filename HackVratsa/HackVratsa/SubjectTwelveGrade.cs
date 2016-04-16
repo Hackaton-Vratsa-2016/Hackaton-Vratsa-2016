@@ -22,7 +22,7 @@ namespace HackVratsa
         }
 
         private void bgButton_Click(object sender, EventArgs e)
-        {          
+        {
             using (var stream = File.OpenRead("json1.json"))
             {
                 DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(Matura));

@@ -7,14 +7,63 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using HackVratsa.Models.Enums;
+using HackVratsa.Models.Matriculation;
+using HackVratsa.Models.Matriculation.Interfaces;
 
 namespace HackVratsa
 {
     public partial class TestForm : Form
     {
-        public TestForm()
+        private int CurrentQuestionIndex;
+        private IMatriculation matriculation;
+
+        public TestForm(IMatriculation matriculation)
         {
-            InitializeComponent();
+            this.InitializeComponent();
+
+            this.matriculation = matriculation;
+
+            this.CurrentQuestionIndex = 0;
+
+            this.ShowQuestion(matriculation);
+        }
+
+        private void TestForm_Load(object sender, EventArgs e)
+        {
+        }
+
+        private void answerOneButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PreviousQuestionButton_Click(object sender, EventArgs e)
+        {
+            if (this.CurrentQuestionIndex > 0)
+            {
+                this.CurrentQuestionIndex--;
+            }
+
+            this.ShowQuestion(this.matriculation);
+        }
+
+        private void ShowQuestion(IMatriculation matriculation)
+        {
+            this.questionLabel.Text = matriculation.Questions[this.CurrentQuestionIndex].QuestionText;
+            this.answerOneCheckButton.Text = matriculation.Questions[this.CurrentQuestionIndex].Answers[0].Text;
+            this.answerTwoCheckButton.Text = matriculation.Questions[this.CurrentQuestionIndex].Answers[1].Text;
+            this.answerTreeCheckButton.Text = matriculation.Questions[this.CurrentQuestionIndex].Answers[2].Text;
+            this.answerFourCheckButton.Text = matriculation.Questions[this.CurrentQuestionIndex].Answers[3].Text;
+        }
+
+        private void NextQuestionButton_Click(object sender, EventArgs e)
+        {
+            if (this.CurrentQuestionIndex < 30)
+            {
+                this.CurrentQuestionIndex++;
+            }
+            this.ShowQuestion(this.matriculation);
         }
     }
 }

@@ -5,17 +5,16 @@ using HackVratsa.Models.Questions.Interfaces;
 
 namespace HackVratsa.Models.Matriculation
 {
-    public abstract class Matriculation : IMatriculation
+    public class Matriculation : IMatriculation
     {
         private int points;
         private int time;
         private IList<IQuestion> questions;
 
-        protected Matriculation(int time)
+        public Matriculation()
         {
-            this.Points = 0;
+            this.points = 0;
             this.Questions = new List<IQuestion>();
-            this.Time = time;
         }
 
         public int Time
