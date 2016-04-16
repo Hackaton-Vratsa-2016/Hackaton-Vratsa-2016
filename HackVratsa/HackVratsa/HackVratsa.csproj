@@ -55,6 +55,9 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="MaturaParser.cs" />
+    <Compile Include="MaturaResources.cs" />
+    <Compile Include="MaturaUtils.cs" />
     <Compile Include="Models\Enums\QuestionTypes.cs" />
     <Compile Include="Models\Grаdes\Intefaces\IGradeBase.cs" />
     <Compile Include="Models\Interfaces\INamealbe.cs" />

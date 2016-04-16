@@ -14,7 +14,12 @@ namespace HackVratsa
     {
         public SubjectTwelveGrade()
         {
-            InitializeComponent();
+            this.InitializeComponent();
+        }
+
+        private void bgButton_Click(object sender, EventArgs e)
+        {
+            MaturaParser.GenerateMatura(MaturaResources.ResourcesPath + MaturaResources.Lit);
         }
     }
 }

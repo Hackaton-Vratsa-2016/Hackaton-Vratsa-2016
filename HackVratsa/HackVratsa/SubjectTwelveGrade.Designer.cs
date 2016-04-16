@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.bgButton = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -50,15 +50,16 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Моля изберете предмет";
             // 
-            // button1
+            // bgButton
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(340, 127);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(300, 92);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Български език и литература";
-            this.button1.UseVisualStyleBackColor = true;
+            this.bgButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bgButton.Location = new System.Drawing.Point(340, 127);
+            this.bgButton.Name = "bgButton";
+            this.bgButton.Size = new System.Drawing.Size(300, 92);
+            this.bgButton.TabIndex = 1;
+            this.bgButton.Text = "Български език и литература";
+            this.bgButton.UseVisualStyleBackColor = true;
+            this.bgButton.Click += new System.EventHandler(this.bgButton_Click);
             // 
             // button2
             // 
@@ -153,7 +154,7 @@
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.bgButton);
             this.Controls.Add(this.label1);
             this.Name = "SubjectTwelveGrade";
             this.Text = "Subject";
@@ -165,7 +166,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button bgButton;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
