@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using HackVratsa.Models.Matriculation;
+using HackVratsa.Models.Matriculation.Interfaces;
 
 namespace HackVratsa
 {
@@ -24,17 +25,14 @@ namespace HackVratsa
 
         private void bgButton_Click(object sender, EventArgs e)
         {
+            Matura matura = new Matura();
             using (var stream = File.OpenRead("json1.json"))
             {
                 DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(Matura));
-                Matura matura = (Matura)ser.ReadObject(stream);
+                matura = (Matura)ser.ReadObject(stream);
             }
-
-            Matura matriculation = new Matura();
-            matriculation.Questions.Add(MaturaUtils.QuestionOne);
-            matriculation.Questions.Add(MaturaUtils.QuestoinTwo);
             this.Hide();
-            Form testForm = new TestForm(matriculation);
+            Form testForm = new TestForm(matura);
             testForm.ShowDialog();
             this.Dispose();
         }

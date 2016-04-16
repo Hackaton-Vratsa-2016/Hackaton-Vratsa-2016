@@ -16,9 +16,9 @@ namespace HackVratsa
     public partial class TestForm : Form
     {
         private int CurrentQuestionIndex;
-        private IMatriculation matriculation;
+        private Matura matriculation;
 
-        public TestForm(IMatriculation matriculation)
+        public TestForm(Matura matriculation)
         {
             this.InitializeComponent();
 
@@ -48,7 +48,7 @@ namespace HackVratsa
             this.ShowQuestion(this.matriculation);
         }
 
-        private void ShowQuestion(IMatriculation matriculation)
+        private void ShowQuestion(Matura matriculation)
         {
             this.questionLabel.Text = matriculation.Questions[this.CurrentQuestionIndex].QuestionText;
             this.answerOneCheckButton.Text = matriculation.Questions[this.CurrentQuestionIndex].Answers[0].Text;
