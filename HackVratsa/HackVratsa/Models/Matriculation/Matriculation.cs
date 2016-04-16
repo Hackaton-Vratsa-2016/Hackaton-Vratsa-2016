@@ -9,7 +9,7 @@ namespace HackVratsa.Models.Matriculation
     {
         private int points;
         private int time;
-        private IList<IQuestion> questions;
+        private IDictionary<IQuestion> questions;
 
         protected Matriculation(int time)
         {
