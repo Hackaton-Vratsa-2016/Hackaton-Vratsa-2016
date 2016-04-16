@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using HackVratsa.Models.Matriculation;
 
 namespace HackVratsa
 {
@@ -28,6 +29,14 @@ namespace HackVratsa
                 DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(Matura));
                 Matura matura = (Matura)ser.ReadObject(stream);
             }
+
+            Matura matriculation = new Matura();
+            matriculation.Questions.Add(MaturaUtils.QuestionOne);
+            matriculation.Questions.Add(MaturaUtils.QuestoinTwo);
+            this.Hide();
+            Form testForm = new TestForm(matriculation);
+            testForm.ShowDialog();
+            this.Dispose();
         }
     }
 }
