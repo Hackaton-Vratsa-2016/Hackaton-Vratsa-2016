@@ -39,9 +39,10 @@ namespace HackVratsa
 				var result = new StringBuilder();
 				using (var reader = new PdfReader(path))
 				{
+					ITextExtractionStrategy strategy = new SimpleTextExtractionStrategy();
+
 					for (int page = 1; page <= reader.NumberOfPages; page++)
 					{
-						ITextExtractionStrategy strategy = new SimpleTextExtractionStrategy();
 						var currentText = PdfTextExtractor.GetTextFromPage(reader, page, strategy).Trim();
 
 						currentText = currentText.Replace("\n", "\r\n");
