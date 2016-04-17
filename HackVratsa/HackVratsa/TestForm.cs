@@ -63,7 +63,7 @@ namespace HackVratsa
 
         private void NextQuestionButton_Click(object sender, EventArgs e)
         {
-            if (this.CurrentQuestionIndex < 30)
+            if (this.CurrentQuestionIndex < this.matura.Questions.Length)
             {
                 this.CurrentQuestionIndex++;
             }
@@ -73,11 +73,46 @@ namespace HackVratsa
         private void finishButton_Click(object sender, EventArgs e)
         {
             this.CalculateGrade();
+
+
+            this.Hide();
+            Form finialForm = new FinalForm(this.database);
+            finialForm.ShowDialog();
+            this.Dispose();
         }
 
-        private double CalculateGrade()
+        private void CalculateGrade()
         {
-            return -1;
+            foreach (var question in this.matura.Questions)
+            {
+                switch (question.CorrectAnswer)
+                {
+                    case "А":
+                        if (question.Answers[0].isChecked)
+                        {
+                            this.database.UserPoints++;
+                        }
+                        break;
+                    case "Б":
+                        if (question.Answers[1].isChecked)
+                        {
+                            this.database.UserPoints++;
+                        }
+                        break;
+                    case "В":
+                        if (question.Answers[2].isChecked)
+                        {
+                            this.database.UserPoints++;
+                        }
+                        break;
+                    case "Г":
+                        if (question.Answers[3].isChecked)
+                        {
+                            this.database.UserPoints++;
+                        }
+                        break;
+                }
+            }
         }
 
         private void DoMagic(object sender, EventArgs e)

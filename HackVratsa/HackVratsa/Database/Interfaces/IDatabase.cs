@@ -8,6 +8,6 @@ namespace HackVratsa.Database.Interfaces
 {
     public interface IDatabase
     {
-        int UserPoints { get; }
+        int UserPoints { get; set; }
     }
 }
