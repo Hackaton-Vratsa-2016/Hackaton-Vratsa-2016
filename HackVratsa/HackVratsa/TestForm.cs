@@ -63,7 +63,7 @@ namespace HackVratsa
 
         private void NextQuestionButton_Click(object sender, EventArgs e)
         {
-            if (this.CurrentQuestionIndex < this.matura.Questions.Length)
+            if (this.CurrentQuestionIndex < this.matura.Questions.Length - 1)
             {
                 this.CurrentQuestionIndex++;
             }
@@ -76,7 +76,7 @@ namespace HackVratsa
 
 
             this.Hide();
-            Form finialForm = new FinalForm(this.database);
+            Form finialForm = new FinalForm(this.database, this.matura.Questions.Length);
             finialForm.ShowDialog();
             this.Dispose();
         }

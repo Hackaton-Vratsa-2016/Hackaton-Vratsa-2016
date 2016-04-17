@@ -15,10 +15,13 @@ namespace HackVratsa
 {
     public partial class FinalForm : Form
     {
-        public FinalForm(IDatabase database)
+        public FinalForm(IDatabase database, int count)
         {
             this.InitializeComponent();
-            this.testPoints.Text = string.Format("{0} точки от {1}", database.UserPoints.ToString(), 5);
+            double grade = ((double)4/count)*database.UserPoints;
+            grade += 2;
+            this.testPoints.Text = string.Format("{0} точки от {1} \n\r" +
+                                                 "{2:F2}", database.UserPoints, count, grade);
         }
 
         private void FinalForm_Load(object sender, EventArgs e)

@@ -41,14 +41,16 @@
             // questionLabel
             // 
             this.questionLabel.AutoSize = true;
+            this.questionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.questionLabel.Location = new System.Drawing.Point(19, 29);
             this.questionLabel.Name = "questionLabel";
-            this.questionLabel.Size = new System.Drawing.Size(49, 13);
+            this.questionLabel.Size = new System.Drawing.Size(98, 25);
             this.questionLabel.TabIndex = 0;
             this.questionLabel.Text = "Question";
             // 
             // PreviousQuestionButton
             // 
+            this.PreviousQuestionButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PreviousQuestionButton.Location = new System.Drawing.Point(22, 354);
             this.PreviousQuestionButton.Name = "PreviousQuestionButton";
             this.PreviousQuestionButton.Size = new System.Drawing.Size(450, 50);
@@ -59,6 +61,7 @@
             // 
             // NextQuestionButton
             // 
+            this.NextQuestionButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NextQuestionButton.Location = new System.Drawing.Point(502, 354);
             this.NextQuestionButton.Name = "NextQuestionButton";
             this.NextQuestionButton.Size = new System.Drawing.Size(450, 50);
@@ -70,6 +73,7 @@
             // answerOneCheckButton
             // 
             this.answerOneCheckButton.Appearance = System.Windows.Forms.Appearance.Button;
+            this.answerOneCheckButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.answerOneCheckButton.Location = new System.Drawing.Point(22, 127);
             this.answerOneCheckButton.Name = "answerOneCheckButton";
             this.answerOneCheckButton.Size = new System.Drawing.Size(450, 100);
@@ -82,6 +86,7 @@
             // answerTreeCheckButton
             // 
             this.answerTreeCheckButton.Appearance = System.Windows.Forms.Appearance.Button;
+            this.answerTreeCheckButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.answerTreeCheckButton.Location = new System.Drawing.Point(22, 233);
             this.answerTreeCheckButton.Name = "answerTreeCheckButton";
             this.answerTreeCheckButton.Size = new System.Drawing.Size(450, 100);
@@ -94,6 +99,7 @@
             // answerFourCheckButton
             // 
             this.answerFourCheckButton.Appearance = System.Windows.Forms.Appearance.Button;
+            this.answerFourCheckButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.answerFourCheckButton.Location = new System.Drawing.Point(502, 233);
             this.answerFourCheckButton.Name = "answerFourCheckButton";
             this.answerFourCheckButton.Size = new System.Drawing.Size(450, 100);
@@ -106,6 +112,7 @@
             // answerTwoCheckButton
             // 
             this.answerTwoCheckButton.Appearance = System.Windows.Forms.Appearance.Button;
+            this.answerTwoCheckButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.answerTwoCheckButton.Location = new System.Drawing.Point(502, 127);
             this.answerTwoCheckButton.Name = "answerTwoCheckButton";
             this.answerTwoCheckButton.Size = new System.Drawing.Size(450, 100);
