@@ -3,42 +3,29 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using HackVratsa.Models.Questions.Interfaces;
+using HackVratsa.Database.Interfaces;
 
 namespace HackVratsa.Database
 {
     public class Database : IDatabase
     {
-        public Database(
-            IList<IList<IQuestion>> bulgarianQuestionsList,
-            IList<IList<IQuestion>> englishQuestionsList,
-            IList<IList<IQuestion>> mathQuestionsList,
-            IList<IList<IQuestion>> physicsQuestionsList,
-            IList<IList<IQuestion>> historyQuestionsList,
-            IList<IList<IQuestion>> geographyQuestionsList,
-            IList<IList<IQuestion>> chemistryQuestionsList)
+        private int userPoints;
+
+        public Database()
         {
-            this.BulgarianQuestionsList = bulgarianQuestionsList;
-            this.EnglishQuestionsList = englishQuestionsList;
-            this.MathQuestionsList = mathQuestionsList;
-            this.PhysicsQuestionsList = physicsQuestionsList;
-            this.HistoryQuestionsList = historyQuestionsList;
-            this.GeographyQuestionsList = geographyQuestionsList;
-            this.ChemistryQuestionsList = chemistryQuestionsList;
+            this.userPoints = 0;
         }
 
-        public IList<IList<IQuestion>> BulgarianQuestionsList { get; set; }
-
-        public IList<IList<IQuestion>> EnglishQuestionsList { get; set; }
-
-        public IList<IList<IQuestion>> MathQuestionsList { get; set; }
-
-        public IList<IList<IQuestion>> PhysicsQuestionsList { get; set; }
-
-        public IList<IList<IQuestion>> HistoryQuestionsList { get; set; }
-
-        public IList<IList<IQuestion>> GeographyQuestionsList { get; set; }
-
-        public IList<IList<IQuestion>> ChemistryQuestionsList { get; set; }
+        public int UserPoints
+        {
+            get { return this.userPoints; }
+            set {
+                if (value <= 0)
+                {
+                    throw new ArgumentOutOfRangeException("Users points cannot be null!");
+                }
+                this.userPoints = value;
+            }
+        }
     }
 }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using HackVratsa.Database.Interfaces;
 using HackVratsa.Models.Matriculation;
 using HackVratsa.Models.Matriculation.Interfaces;
 
@@ -25,6 +26,8 @@ namespace HackVratsa
 
         private void bgButton_Click(object sender, EventArgs e)
         {
+            Database.Database database = new Database.Database();
+
             Matura matura = new Matura();
             using (var stream = File.OpenRead("json1.json"))
             {
@@ -32,7 +35,7 @@ namespace HackVratsa
                 matura = (Matura)ser.ReadObject(stream);
             }
             this.Hide();
-            Form testForm = new TestForm(matura);
+            Form testForm = new TestForm(matura, database);
             testForm.ShowDialog();
             this.Dispose();
         }

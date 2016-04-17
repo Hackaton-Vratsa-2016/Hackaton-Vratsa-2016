@@ -12,6 +12,8 @@
         public List<Answer> Answers { get; set; }
 
         public string CorrectAnswer { get; set; }
+        
+        public string SelectedAnswerID { get; set; }
 
         public int Points { get; set; }
     }

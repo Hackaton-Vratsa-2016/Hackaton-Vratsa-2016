@@ -35,12 +35,13 @@
             this.answerTreeCheckButton = new System.Windows.Forms.CheckBox();
             this.answerFourCheckButton = new System.Windows.Forms.CheckBox();
             this.answerTwoCheckButton = new System.Windows.Forms.CheckBox();
+            this.finishButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // questionLabel
             // 
             this.questionLabel.AutoSize = true;
-            this.questionLabel.Location = new System.Drawing.Point(97, 48);
+            this.questionLabel.Location = new System.Drawing.Point(19, 29);
             this.questionLabel.Name = "questionLabel";
             this.questionLabel.Size = new System.Drawing.Size(49, 13);
             this.questionLabel.TabIndex = 0;
@@ -76,6 +77,7 @@
             this.answerOneCheckButton.Text = "checkBox1";
             this.answerOneCheckButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.answerOneCheckButton.UseVisualStyleBackColor = true;
+            this.answerOneCheckButton.CheckedChanged += new System.EventHandler(this.DoMagic);
             // 
             // answerTreeCheckButton
             // 
@@ -87,6 +89,7 @@
             this.answerTreeCheckButton.Text = "checkBox2";
             this.answerTreeCheckButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.answerTreeCheckButton.UseVisualStyleBackColor = true;
+            this.answerTreeCheckButton.CheckedChanged += new System.EventHandler(this.DoMagic3);
             // 
             // answerFourCheckButton
             // 
@@ -98,6 +101,7 @@
             this.answerFourCheckButton.Text = "checkBox3";
             this.answerFourCheckButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.answerFourCheckButton.UseVisualStyleBackColor = true;
+            this.answerFourCheckButton.CheckedChanged += new System.EventHandler(this.DoMagic4);
             // 
             // answerTwoCheckButton
             // 
@@ -109,12 +113,24 @@
             this.answerTwoCheckButton.Text = "checkBox1";
             this.answerTwoCheckButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.answerTwoCheckButton.UseVisualStyleBackColor = true;
+            this.answerTwoCheckButton.CheckedChanged += new System.EventHandler(this.DoMagic2);
+            // 
+            // finishButton
+            // 
+            this.finishButton.Location = new System.Drawing.Point(801, 12);
+            this.finishButton.Name = "finishButton";
+            this.finishButton.Size = new System.Drawing.Size(171, 46);
+            this.finishButton.TabIndex = 12;
+            this.finishButton.Text = "Предай";
+            this.finishButton.UseVisualStyleBackColor = true;
+            this.finishButton.Click += new System.EventHandler(this.finishButton_Click);
             // 
             // TestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 561);
+            this.Controls.Add(this.finishButton);
             this.Controls.Add(this.answerTwoCheckButton);
             this.Controls.Add(this.answerFourCheckButton);
             this.Controls.Add(this.answerTreeCheckButton);
@@ -139,5 +155,6 @@
         private System.Windows.Forms.CheckBox answerTreeCheckButton;
         private System.Windows.Forms.CheckBox answerFourCheckButton;
         private System.Windows.Forms.CheckBox answerTwoCheckButton;
+        private System.Windows.Forms.Button finishButton;
     }
 }

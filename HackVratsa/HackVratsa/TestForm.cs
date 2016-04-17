@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using HackVratsa.Database.Interfaces;
 using HackVratsa.Models.Enums;
 using HackVratsa.Models.Matriculation;
 using HackVratsa.Models.Matriculation.Interfaces;
@@ -16,26 +17,24 @@ namespace HackVratsa
     public partial class TestForm : Form
     {
         private int CurrentQuestionIndex;
-        private Matura matriculation;
+        private Matura matura;
+        private IDatabase database;
 
-        public TestForm(Matura matriculation)
+        public TestForm(Matura matura, IDatabase database)
         {
             this.InitializeComponent();
 
-            this.matriculation = matriculation;
+            this.database = database;
+
+            this.matura = matura;
 
             this.CurrentQuestionIndex = 0;
 
-            this.ShowQuestion(matriculation);
+            this.ShowQuestion(matura);
         }
 
         private void TestForm_Load(object sender, EventArgs e)
         {
-        }
-
-        private void answerOneButton_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void PreviousQuestionButton_Click(object sender, EventArgs e)
@@ -45,16 +44,21 @@ namespace HackVratsa
                 this.CurrentQuestionIndex--;
             }
 
-            this.ShowQuestion(this.matriculation);
+            this.ShowQuestion(this.matura);
         }
 
-        private void ShowQuestion(Matura matriculation)
+        private void ShowQuestion(Matura matura)
         {
-            this.questionLabel.Text = matriculation.Questions[this.CurrentQuestionIndex].QuestionText;
-            this.answerOneCheckButton.Text = matriculation.Questions[this.CurrentQuestionIndex].Answers[0].Text;
-            this.answerTwoCheckButton.Text = matriculation.Questions[this.CurrentQuestionIndex].Answers[1].Text;
-            this.answerTreeCheckButton.Text = matriculation.Questions[this.CurrentQuestionIndex].Answers[2].Text;
-            this.answerFourCheckButton.Text = matriculation.Questions[this.CurrentQuestionIndex].Answers[3].Text;
+            this.questionLabel.Text = matura.Questions[this.CurrentQuestionIndex].QuestionText;
+            this.answerOneCheckButton.Text = matura.Questions[this.CurrentQuestionIndex].Answers[0].Text;
+            this.answerTwoCheckButton.Text = matura.Questions[this.CurrentQuestionIndex].Answers[1].Text;
+            this.answerTreeCheckButton.Text = matura.Questions[this.CurrentQuestionIndex].Answers[2].Text;
+            this.answerFourCheckButton.Text = matura.Questions[this.CurrentQuestionIndex].Answers[3].Text;
+
+            this.answerOneCheckButton.Checked = matura.Questions[this.CurrentQuestionIndex].Answers[0].isChecked;
+            this.answerTwoCheckButton.Checked = matura.Questions[this.CurrentQuestionIndex].Answers[1].isChecked;
+            this.answerTreeCheckButton.Checked = matura.Questions[this.CurrentQuestionIndex].Answers[2].isChecked;
+            this.answerFourCheckButton.Checked = matura.Questions[this.CurrentQuestionIndex].Answers[3].isChecked;
         }
 
         private void NextQuestionButton_Click(object sender, EventArgs e)
@@ -63,7 +67,37 @@ namespace HackVratsa
             {
                 this.CurrentQuestionIndex++;
             }
-            this.ShowQuestion(this.matriculation);
+            this.ShowQuestion(this.matura);
+        }
+
+        private void finishButton_Click(object sender, EventArgs e)
+        {
+            this.CalculateGrade();
+        }
+
+        private double CalculateGrade()
+        {
+            return -1;
+        }
+
+        private void DoMagic(object sender, EventArgs e)
+        {
+            this.matura.Questions[this.CurrentQuestionIndex].Answers[0].isChecked = this.answerOneCheckButton.Checked;
+        }
+
+        private void DoMagic2(object sender, EventArgs e)
+        {
+            this.matura.Questions[this.CurrentQuestionIndex].Answers[1].isChecked = this.answerTwoCheckButton.Checked;
+        }
+
+        private void DoMagic3(object sender, EventArgs e)
+        {
+            this.matura.Questions[this.CurrentQuestionIndex].Answers[2].isChecked = this.answerTreeCheckButton.Checked;
+        }
+
+        private void DoMagic4(object sender, EventArgs e)
+        {
+            this.matura.Questions[this.CurrentQuestionIndex].Answers[3].isChecked = this.answerFourCheckButton.Checked;
         }
     }
 }
