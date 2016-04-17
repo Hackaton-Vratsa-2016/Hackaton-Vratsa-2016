@@ -13,7 +13,7 @@
 
         public string CorrectAnswer { get; set; }
         
-        public string SelectedAnswerID { get; set; }
+        public string SelectedAnswerId { get; set; }
 
         public int Points { get; set; }
     }
